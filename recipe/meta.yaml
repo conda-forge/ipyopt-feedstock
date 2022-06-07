@@ -49,7 +49,7 @@ about:
     It was developed by Eric Xu when he was a PhD student at Washington
     University.
     Original repository: https://github.com/xuy/pyipopt.
-  dev_url: https://github.com/g-braeunlich/IPyOpt
+  dev_url: https://gitlab.com/g-braeunlich/ipyopt
 
 extra:
   recipe-maintainers:
