@@ -21,7 +21,7 @@ requirements:
   host:
     - python
     - ipopt
-    - numpy 1.14
+    - numpy
     - pip
   run:
     - python
