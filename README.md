@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyopt-feedstoc
 
 Summary: Python wrapper for IPOPT
 
-Development: https://github.com/g-braeunlich/IPyOpt
+Development: https://gitlab.com/g-braeunlich/ipyopt
 
 IPyOpt is a python module that allows you to use
 IPOPT (http://www.coin-or.org/Ipopt/) in Python.
