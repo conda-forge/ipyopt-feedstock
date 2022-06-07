@@ -12,7 +12,9 @@ source:
 build:
   number: 0
   skip: true  # [win or py2k]
-  script: {{ PYTHON }} -m pip install --no-deps . -vv
+  script:
+    - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+    - {{ PYTHON }} -m pip install --no-deps . -vv
 
 requirements:
   build:
