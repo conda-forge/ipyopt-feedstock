@@ -14,6 +14,9 @@ build:
   skip: true  # [win or py2k]
   script:
     - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+    # setuptools still ignores CXX env and uses C instead
+    - export CFLAGS=$CXXFLAGS
+    - export CC=$CXX
     - {{ PYTHON }} -m pip install --no-deps . -vv
 
 requirements:
