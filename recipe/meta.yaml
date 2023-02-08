@@ -10,7 +10,7 @@ source:
   sha256: 8ff0dc59326da97d45e62c94ea1d79a0a8155b5e3ebfd30326864cbbabae4d0b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or py2k]
   script:
     - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
