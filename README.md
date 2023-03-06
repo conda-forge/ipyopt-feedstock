@@ -1,11 +1,11 @@
-About ipyopt
-============
+About ipyopt-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyopt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/g-braeunlich/IPyOpt
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ipyopt-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python wrapper for IPOPT
 
