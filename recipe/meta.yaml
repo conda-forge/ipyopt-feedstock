@@ -1,5 +1,5 @@
 {% set name = "ipyopt" %}
-{% set version = "0.12.7" %}
+{% set version = "0.12.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ac9e0cf5180f0741f0e2b2f2cef4596fac259903361b3b8453762583168eebf6
+  sha256: 0b841f319d7af1ecfd93dc59ff3b65d51d01a59c9f59d7dc3bb2bd42604efd84
 
 build:
-  number: 4
+  number: 0
   skip: true  # [win or py2k]
   script:
     - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
