@@ -30,6 +30,7 @@ requirements:
     - ipopt
     - numpy
     - pip
+    - setuptools
   run:
     - python
     - {{ pin_compatible('ipopt') }}
