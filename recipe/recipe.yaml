@@ -16,7 +16,7 @@ build:
   number: 1
   skip: win
   script:
-    - python3 -m pip install --no-deps . -vv
+    - $PYTHON -m pip install --no-deps . -vv
 
 requirements:
   build:
