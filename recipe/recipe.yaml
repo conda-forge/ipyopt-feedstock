@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  name: ipyopt
+  version: 0.12.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 223afd604f643568d9865cd660624017a2d9a5079b7040403f660f3b359cb71e
+
+build:
+  number: 1
+  skip: win
+  script:
+    - $PYTHON -m pip install --no-deps . -vv
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - ${{ compiler('cxx') }}
+    - pkg-config
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
+  host:
+    - python
+    - ipopt
+    - numpy
+    - pip
+    - setuptools
+  run:
+    - python
+
+tests:
+  - python:
+      imports:
+        - ipyopt
+  - files:
+      source:
+        - examples/hs071.py
+    script:
+      - python examples/hs071.py
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Python wrapper for IPOPT
+  description: |
+    IPyOpt is a python module that allows you to use
+    IPOPT (http://www.coin-or.org/Ipopt/) in Python.
+    It was developed by Eric Xu when he was a PhD student at Washington
+    University.
+    Original repository: https://github.com/xuy/pyipopt.
+  homepage: https://ipyopt-devs.gitlab.io/ipyopt/
+  repository: https://gitlab.com/ipyopt-devs/ipyopt
+
+extra:
+  recipe-maintainers:
+    - traversaro
+    - minrk
